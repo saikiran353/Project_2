@@ -223,7 +223,7 @@ def check_avail(type):
 
 		for i in d['items']:
 			if i['name'] == type[0] and i["available_quantity"] >= 1 and type_quantity <= i["available_quantity"]:
-				print('yes avilable')
+				print('yes available')
 				order_lst.append((type, type_quantity))
 				return
 
@@ -267,8 +267,7 @@ def order():
 		print('items:')
 		print('main item')
 
-		# --------------------------------------------------------#
-
+		# ---------------------------------------------#
 		base_item = base_item_review()
 		check_base = check_avail(base_item)
 		if check_base == 0:
@@ -280,9 +279,7 @@ def order():
 				# break
 				return order()
 		order_summary()
-
-
-# --------------------------------------------------------#
+		# ----------------------------------------------#
 
 # responsible for all ordering process repeatedly.
 def main():
